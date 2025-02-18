@@ -1,0 +1,25 @@
+@import "tailwindcss";
+:root{
+    --background-color:white;
+    --text-color:rgb(32, 30, 30);
+  }
+
+
+
+/* Apply global styles for body */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+.App{
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"]{
+    --background-color:#0a0a0a;
+    --text-color:white;
+}
+
+
