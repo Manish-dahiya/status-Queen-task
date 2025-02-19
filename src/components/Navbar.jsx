@@ -59,7 +59,6 @@ function Navbar({ setIsDark, isDark }) {
             <li id='status' className='w-20'>
               <FormControl sx={{ border: "none", borderRadius: "3px", outline: "none" }}>
                 <Select
-                  multiple
                   displayEmpty
                   value={personName}
                   onChange={handleChange}
@@ -97,7 +96,6 @@ function Navbar({ setIsDark, isDark }) {
             <li id='wallpapers' className='w-32'>
               <FormControl sx={{ border: "none", borderRadius: "3px", outline: "none" }}>
                 <Select
-                  multiple
                   displayEmpty
                   value={personName}
                   onChange={handleChange}
