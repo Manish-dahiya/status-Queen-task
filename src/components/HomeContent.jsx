@@ -50,6 +50,13 @@ const statusMessages=[
     
 ]
 
+const categories=[
+    [{title:"Latest WhatsApp Status", url:"/whatsapp-status" }, {title:"Hindi Status for WhatsApp" , url:"/hindi-status" }, {title:"Punjabi Status for WhatsApp" ,url:"/punjabi-status"  },{title: "English Status for WhatsApp" , url:"/english-status" }],
+    [{title:"Love Status in Hindi" ,url:"/love-status"   }, {title:"Hindi Status for WhatsApp", url:"/hindi-status"  }, {title:"sad Status for WhatsApp" , url:"/sad-status"  }, {title:"English Status for WhatsApp", url:"motivational-status"  }],
+    [{title: "Love DP Pictures", url:"/love-dp-pictures"  }  ,{title: "Sad DP Pictures", url:"/sad-dp-pictures" }, {title:"Alone DP Pictures" , url:"/alone-dp-pictures" },{title: "Religious DP Pictures",url:"/religious-dp-pictures"  }],
+    [{ title: "Best WhatsApp DP", url:"/best-dp" }, {title:"Latest Best Ringtone", url:"/latest-ringtone"  }, { title:"HD 4K Mobile Wallpapers", url:"hd-mobile-wallpapers" },{title: "UHD Desktop Wallpapers",url:"/uhd-desktop-wallpapers" }],
+]
+
 const dpImages=[
     dpImage1,dpImage2,dpImage3,dpImage4,dpImage5,dpImage6,dpImage7,dpImage8,dpImage9
 ]
@@ -93,30 +100,19 @@ function HomeContent() {
 </section>
 <section id='latest-dp-images' className='mt-16 lg:mx-10 mx-2 lg:p-4 p-1 text-center rounded-lg bg-[color:var(--background-secondary-color)]  shadow-xl shadow-[#131212]'>
         <div className='m-2 p-3 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 bg-[color:var(--background-color)]'>
-            <ul>
-                <li className=' mt-2'><a href="" className='hover:text-pink-500   ' >Latest whatsapp Status</a></li>
-                <li className='mt-2'><a href="" className='hover:text-pink-500 my-3'>Hindi Status for Whatsapp</a></li>
-                <li className='mt-2'><a href="" className='hover:text-pink-500 my-3'>Punjabi Status for Whatsapp</a></li>
-                <li className='mt-2'><a href="" className='hover:text-pink-500 my-3'>English Status for Whatsapp</a></li>
-            </ul>
-            <ul>
-                <li className='mt-2'><a href="" className='hover:text-pink-500'>Love Status in Hindi</a></li>
-                <li className='mt-2'><a href="" className='hover:text-pink-500'>Hindi Status for Whatsapp</a></li>
-                <li className='mt-2'><a href="" className='hover:text-pink-500'>Punjabi Status for Whatsapp</a></li>
-                <li className='mt-2'><a href="" className='hover:text-pink-500'>English Status for Whatsapp</a></li>
-            </ul>
-            <ul>
-                <li className='mt-2'><a href="" className='hover:text-pink-500'>Love DP Pictures</a></li>
-                <li className='mt-2'><a href="" className='hover:text-pink-500'>Sad DP Pictures</a></li>
-                <li className='mt-2'><a href="" className='hover:text-pink-500'>Alone Dp Pictures</a></li>
-                <li className='mt-2'><a href="" className='hover:text-pink-500'>Religous DP Pictures </a></li>
-            </ul>
-            <ul>
-                <li className='mt-2'><a href="" className='hover:text-pink-500'>Best Whatsapp DP</a></li>
-                <li className='mt-2'><a href="" className='hover:text-pink-500'>Latest Best Ringtone</a></li>
-                <li className='mt-2'><a href="" className='hover:text-pink-500'>HD 4k Mobile wallpapers</a></li>
-                <li className='mt-2'><a href="" className='hover:text-pink-500'>UHD  Desktop wallpapers </a></li>
-            </ul>
+            {
+                categories.map((category,index)=>(
+                    <ul key={index}> 
+                        {
+                            category.map((item,idx)=>(
+                                <li key={idx} className='mt-2'  > <a href={item.url} className='hover:text-pink-500'  >  {item.title}  </a>  </li>
+                            ))
+                        }
+
+                     </ul>
+                ))
+            }
+
         </div>
 </section>
 

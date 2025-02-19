@@ -47,17 +47,15 @@ function Navbar( {setIsDark  ,isDark}) {
   return (
     <>
     <div className="flex justify-around items-center gap-5   shadow-md">
-      {/* //home icon ayega gayab krke */}
-      <div className='s'>
-        <img src={logo} alt="logo" className='h-14 lg:block hidden' />
-        <span className='lg:hidden block '><HomeIcon   /></span>
+      <div >
+      <a href="/">  <img src={logo} alt="logo" className='h-14 lg:block hidden' />  </a>  
+        <a className='lg:hidden block '><HomeIcon   /></a>
       </div>
 
-      {/* //gayab krdo -> hamburger*/}
 
       <div className=' justify-center  hidden lg:flex '>
         <ul className='flex justify-center items-center gap-7 mt-2   text  '>
-          <li className='flex' > <HomeIcon className='mb-2' />  HOME  </li>
+          <li className='flex' ><a href="/ ">  <HomeIcon className='mb-2' />  HOME </a>  </li>
           <li id='status' className='w-20'>
           <FormControl sx={{  border:"none", borderRadius:"3px" ,outline:"none" }}>
         <Select
@@ -88,7 +86,7 @@ function Navbar( {setIsDark  ,isDark}) {
                 "&:hover": { backgroundColor: "pink" }, // Change background color to pink on hover
               }}
             >
-              {name}
+              <a href= {`/${name}`}  > {name} </a>
             </MenuItem>
           ))}
         </Select>
@@ -125,13 +123,13 @@ function Navbar( {setIsDark  ,isDark}) {
                 "&:hover": { backgroundColor: "pink" }, // Change background color to pink on hover
               }}
             >
-              {name}
+              <a href= {`/${name}`} > {name} </a>
             </MenuItem>
           ))}
         </Select>
       </FormControl>
           </li>
-          <li> <CakeIcon className='mb-2 '  />  BirthdayWishes</li>
+          <li> <CakeIcon className='mb-2 '  />  <a href="/birthday-wishes"> BirthdayWishes </a></li>
           <li  className='cursor-pointer'  onClick={()=>setIsDark((prev)=>!prev)} >Mode  {isDark? <SunIcon/> : <MoonIcon className='font-medium'/>   } </li>
     
 
