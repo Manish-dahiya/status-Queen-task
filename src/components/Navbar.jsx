@@ -136,7 +136,7 @@ function Navbar( {setIsDark  ,isDark}) {
         </ul>
       </div>
       
-      <div onClick={() => setIsSidebar(prev => !prev)} className={`cursor-pointer relative lg:hidden  transition-all duration-300 ease-in-out  ${
+      <div onClick={() => setIsSidebar(prev => !prev)} className={`cursor-pointer relative lg:hidden  transition-all duration-300 ease-in-out  ${isSidebar? 'right-45': 'right-5'}   md:${
         isSidebar ? 'right-30' : 'right-0'
       } `} > {!isSidebar ? <span> &#9776;</span>:" X" }
 
@@ -157,3 +157,4 @@ function Navbar( {setIsDark  ,isDark}) {
 }
 
 export default Navbar
+

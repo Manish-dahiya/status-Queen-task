@@ -93,7 +93,7 @@ function HomeContent() {
 
     <div className='grid grid-cols-2 justify-center items-center gap-2 lg:gap-6 lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-3  '>
         {dpImages.map((item,index)=>(
-            <img src={item} alt="dp-image" />
+            <img src={item} key={index} alt="dp-image" />
         ))}
     </div>
 

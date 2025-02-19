@@ -14,8 +14,6 @@ function App() {
   useEffect(()=>{
   document.querySelector("body").setAttribute("data-theme",isDark?"dark":"light"); 
   localStorage.setItem("theme", isDark?"dark" :"light");
-  console.log(isDark);
-
 },[isDark])
 
   return (
