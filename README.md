@@ -60,38 +60,36 @@ npm or yarn
   cd statusqueen-homepage
 
 3️⃣ Install Dependencies
-
-  npm install
-  # or
-  yarn install
+--------------------------------------------------------------------------
+  + npm install
+   or
+  + yarn install
 
 4️⃣ Start the Development Server
-
-  npm run dev
-  # or
-  yarn dev
+---------------------------------------------------------------------------
+  + npm run dev
+   or
+  + yarn dev
 
 This will start the development server at http://localhost:5173/ (Vite default port).
 
 🏗 Building for Production
-
+------------------------------------------------------------------
 To create an optimized production build, run:
 
-  npm run build
-  # or
-  yarn build
+  + npm run build
+   or
+  + yarn build
 
 The output will be in the dist/ folder.
 
 ✅ Testing the Project
-
+----------------------------------------------------------------
 If you have tests written, you can run them using:
 
-  npm test
-  # or
-  yarn test
-
-For Vite projects, additional testing frameworks like Vitest may be needed.
+  + npm test
+   or
+  + yarn test
 
 
 📜 License
