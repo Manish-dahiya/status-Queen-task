@@ -9,6 +9,8 @@ import StatusIcon from '@mui/icons-material/SignalWifiStatusbar4Bar';
 import ImageIcon from '@mui/icons-material/InsertPhoto';
 import CakeIcon from '@mui/icons-material/Cake';
 import CreateIcon from '@mui/icons-material/Create';
+import UpIcon from '@mui/icons-material/KeyboardArrowUp';
+import DownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 
 
@@ -57,7 +59,7 @@ function Sidebar({setIsDark} ) {
             <div className='border-1 border-gray-700 my-7'></div>
 
             <div onClick={toggleStatus} className='cursor-pointer'> 
-                <StatusIcon /> status
+              <span className='me-20'>  <StatusIcon /> status </span> <span> { isStatusOpen? <DownIcon/> : <UpIcon/>   }</span>
 
                 { isStatusOpen && <ul id="options" className='flex flex-col gap-7 mt-14' >
                     <li> <a href="/dp-images"> <ImageIcon/> DP IMAGES   </a> </li>
@@ -71,7 +73,7 @@ function Sidebar({setIsDark} ) {
             
             <div className='border-1 border-gray-700 my-7'></div>
             <div onClick={toggleWallpapers}  className='cursor-pointer'> 
-                    <ImageIcon/> Wallpapers 
+                  <span className='me-10'>   <ImageIcon/> Wallpapers  </span> <span> {isWallpapersOpen ? <DownIcon/> : <UpIcon/> } </span>
 
                     { isWallpapersOpen && <ul id="options" className='flex flex-col gap-7 mt-14' >
                     <li> <a href="/mobile"> <ImageIcon/> MOBILE </a> </li>
