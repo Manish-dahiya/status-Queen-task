@@ -13,7 +13,7 @@ function StatusMessageCard({message}) {
     }
 
   return (
-    <div className='lg:h-36 h-28 w-auto lg:p-7 p-2 border-2 text-start rounded-lg  '>
+    <div className='lg:h-36 h-28 w-auto lg:p-7 p-2  text-start rounded-lg bg-[color:var(--background-color)]  '>
         <h4>{message}</h4>
 
         <div className='flex justify-between mt-3 lg:mt-7'>

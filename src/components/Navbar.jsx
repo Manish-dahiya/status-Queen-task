@@ -147,7 +147,7 @@ function Navbar( {setIsDark  ,isDark}) {
 
     </div>
     {
-       <div   className={`fixed top-0 right-0 lg:hidden  h-full w-64 px-4 transition-all duration-300 ease-in-out ${
+       <div   className={`fixed top-0 z-[99999] right-0 lg:hidden  h-full w-64 px-4 transition-all duration-300 ease-in-out ${
         isSidebar ? 'right-0' : 'right-[-300px]'
       }`}   >
            <Sidebar  setIsDark={setIsDark} />

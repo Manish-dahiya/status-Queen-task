@@ -55,8 +55,8 @@ const dpImages=[
 ]
 function HomeContent() {
   return (
-    <div className='bg-[color : var(bg-secondary-color)]'>
-       <section id='hero' style={{backgroundImage: `url(${HeroBackground})`, backgroundRepeat:"no-repeat", backgroundSize:"cover"}} className='relative h-[75vh] w-full overflow-visible'>
+    <div className='bg-[color : var(bg-secondary-color)]  '>
+       <section id='hero' style={{backgroundImage: `url(${HeroBackground})`, backgroundRepeat:"no-repeat", backgroundSize:"cover"}} className='relative h-[75vh]  w-full overflow-visible'>
     
     <div className='bg-black opacity-25 absolute inset-0 w-full h-full'></div>
 
@@ -69,10 +69,10 @@ function HomeContent() {
     </div>
 </section>
 
-<section id='latest-whatsapp-status' className='rounded-lg relative lg:mx-10 mx-2 mt-[-5vh] z-30 bg-[color:var(--background-secondary-color)] text-center h-auto   p-5 shadow-xl shadow-gray-900'> 
+<section id='latest-whatsapp-status' className='rounded-lg  lg:mx-10 mx-2 mt-[-5vh] relative z-30 bg-[color:var(--background-secondary-color)] text-center h-auto   p-5 shadow-xl shadow-gray-900'> 
     <h3>latest Whatsapp Wallpapers</h3>
 
-    <div className='grid grid-cols-2 gap-6 lg:grid-cols-4 '>
+    <div className='grid grid-cols-2 gap-6 lg:grid-cols-4  '>
         {
             statusMessages.map((item,index)=>{
                 return <StatusMessageCard key={index} message={item.message}  />

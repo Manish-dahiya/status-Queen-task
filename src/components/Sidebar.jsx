@@ -44,8 +44,12 @@ function Sidebar({setIsDark} ) {
     };
 
     return (
-        <div className='w-96 border-2 h-[100vh] absolute z-10 text-gray-700  px-10 py-3  font-semibold '>
-            <div><span> <HomeIcon /> Home </span> <span onClick={()=>setIsDark((prev)=>!prev)} >Mode</span>
+        <div className='w-96   h-[100vh] fixed z-[999]  bg-[color:var(--background-secondary-color)] px-10 py-3  font-semibold '>
+            <div>
+                <div className='flex gap-10' >
+                     <span><HomeIcon />Home </span> 
+                     <span onClick={()=>setIsDark((prev)=>!prev)} >Mode</span> 
+                </div> 
 
             
               
