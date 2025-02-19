@@ -47,7 +47,7 @@ function Sidebar({setIsDark} ) {
         <div className='w-96   h-[100vh] fixed z-[999]  bg-[color:var(--background-secondary-color)] px-10 py-3  font-semibold '>
             <div>
                 <div className='flex gap-10' >
-                     <span><HomeIcon />Home </span> 
+                     <a href='/' ><HomeIcon />Home </a> 
                      <span onClick={()=>setIsDark((prev)=>!prev)} >Mode</span> 
                 </div> 
 
@@ -60,11 +60,11 @@ function Sidebar({setIsDark} ) {
                 <StatusIcon /> status
 
                 { isStatusOpen && <ul id="options" className='flex flex-col gap-7 mt-14' >
-                    <li> <ImageIcon/> DP IMAGES </li>
-                    <li><ImageIcon/>  IMAGE STATUS </li>
-                    <li> <CreateIcon/> ENGLISH STATUS</li>
-                    <li><CreateIcon/> HINDI STATUS </li>
-                    <li><CreateIcon/> PUNJABI STATUS </li>
+                    <li> <a href="/dp-images"> <ImageIcon/> DP IMAGES   </a> </li>
+                    <li> <a href="/image-status"> <ImageIcon/>  IMAGE STATUS  </a>  </li>
+                    <li> <a href="/english-status"> <CreateIcon/> ENGLISH STATUS </a>  </li>
+                    <li> <a href="/hindi-status"> <CreateIcon/> HINDI STATUS </a>  </li>
+                    <li> <a href="/punjabi-status"> <CreateIcon/> PUNJABI STATUS  </a> </li>
                 </ul>}
 
             </div>
@@ -74,14 +74,14 @@ function Sidebar({setIsDark} ) {
                     <ImageIcon/> Wallpapers 
 
                     { isWallpapersOpen && <ul id="options" className='flex flex-col gap-7 mt-14' >
-                    <li> <ImageIcon/> MOBILE </li>
-                    <li><ImageIcon/>  DESKTOP </li>
+                    <li> <a href="/mobile"> <ImageIcon/> MOBILE </a> </li>
+                    <li> <a href="/desktop">  <ImageIcon/>  DESKTOP  </a>  </li>
                    
                 </ul>}
 
             </div>
             <div className='border-1 border-gray-700 my-7'></div>
-            <div> <HomeIcon /> Home</div>
+            <a> <CakeIcon /> Birthday Wishes</a>
             <div className='border-1 border-gray-700 my-7'></div>
 
 
