@@ -118,9 +118,9 @@ function HomeContent() {
 
             <footer className='mt-10  py-1  flex justify-around bg-[color:var(background-color)] '>
                 <div className='flex justify-evenly gap-4'>
-                    <h4>PRIVACY POLICY</h4>
-                    <h4>SITE MAP</h4>
-                    <h4>CONTACT US</h4>
+                    <a href='/privacy-policy'>PRIVACY POLICY</a>
+                    <a href='site-map'>SITE MAP</a>
+                    <a href='contact-us'>CONTACT US</a>
                 </div>
 
                 <div id='socials flex justify-evenly  w-auto'>
