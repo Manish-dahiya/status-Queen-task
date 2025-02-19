@@ -14,7 +14,7 @@ import DownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 
 
-function Sidebar({setIsDark} ) {
+function Sidebar({ setIsDark }) {
     const [personName, setPersonName] = useState([]);
     const theme = useTheme();
     const [isStatusOpen, setIsStatusOpen] = useState(false); // State for Status section
@@ -30,7 +30,7 @@ function Sidebar({setIsDark} ) {
         );
     }
 
-   
+
     const toggleStatus = () => {
         setIsStatusOpen(!isStatusOpen);
         if (isWallpapersOpen) {
@@ -49,36 +49,36 @@ function Sidebar({setIsDark} ) {
         <div className='w-96   h-[100vh] fixed z-[999]  bg-[color:var(--background-secondary-color)] px-10 py-3  font-semibold '>
             <div>
                 <div className='flex gap-10' >
-                     <a href='/' ><HomeIcon />Home </a> 
-                     <span onClick={()=>setIsDark((prev)=>!prev)} >Mode</span> 
-                </div> 
+                    <a href='/' ><HomeIcon />Home </a>
+                    <span onClick={() => setIsDark((prev) => !prev)} >Mode</span>
+                </div>
 
-            
-              
-                        </div>
+
+
+            </div>
             <div className='border-1 border-gray-700 my-7'></div>
 
-            <div onClick={toggleStatus} className='cursor-pointer'> 
-              <span className='me-20'>  <StatusIcon /> status </span> <span> { isStatusOpen? <DownIcon/> : <UpIcon/>   }</span>
+            <div onClick={toggleStatus} className='cursor-pointer'>
+                <span className='me-20'>  <StatusIcon /> status </span> <span> {isStatusOpen ? <DownIcon /> : <UpIcon />}</span>
 
-                { isStatusOpen && <ul id="options" className='flex flex-col gap-7 mt-14' >
-                    <li> <a href="/dp-images"> <ImageIcon/> DP IMAGES   </a> </li>
-                    <li> <a href="/image-status"> <ImageIcon/>  IMAGE STATUS  </a>  </li>
-                    <li> <a href="/english-status"> <CreateIcon/> ENGLISH STATUS </a>  </li>
-                    <li> <a href="/hindi-status"> <CreateIcon/> HINDI STATUS </a>  </li>
-                    <li> <a href="/punjabi-status"> <CreateIcon/> PUNJABI STATUS  </a> </li>
+                {isStatusOpen && <ul id="options" className='flex flex-col gap-7 mt-14' >
+                    <li> <a href="/dp-images"> <ImageIcon /> DP IMAGES   </a> </li>
+                    <li> <a href="/image-status"> <ImageIcon />  IMAGE STATUS  </a>  </li>
+                    <li> <a href="/english-status"> <CreateIcon /> ENGLISH STATUS </a>  </li>
+                    <li> <a href="/hindi-status"> <CreateIcon /> HINDI STATUS </a>  </li>
+                    <li> <a href="/punjabi-status"> <CreateIcon /> PUNJABI STATUS  </a> </li>
                 </ul>}
 
             </div>
-            
-            <div className='border-1 border-gray-700 my-7'></div>
-            <div onClick={toggleWallpapers}  className='cursor-pointer'> 
-                  <span className='me-10'>   <ImageIcon/> Wallpapers  </span> <span> {isWallpapersOpen ? <DownIcon/> : <UpIcon/> } </span>
 
-                    { isWallpapersOpen && <ul id="options" className='flex flex-col gap-7 mt-14' >
-                    <li> <a href="/mobile"> <ImageIcon/> MOBILE </a> </li>
-                    <li> <a href="/desktop">  <ImageIcon/>  DESKTOP  </a>  </li>
-                   
+            <div className='border-1 border-gray-700 my-7'></div>
+            <div onClick={toggleWallpapers} className='cursor-pointer'>
+                <span className='me-10'>   <ImageIcon /> Wallpapers  </span> <span> {isWallpapersOpen ? <DownIcon /> : <UpIcon />} </span>
+
+                {isWallpapersOpen && <ul id="options" className='flex flex-col gap-7 mt-14' >
+                    <li> <a href="/mobile"> <ImageIcon /> MOBILE </a> </li>
+                    <li> <a href="/desktop">  <ImageIcon />  DESKTOP  </a>  </li>
+
                 </ul>}
 
             </div>
